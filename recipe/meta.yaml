@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python =2.7|>3.3
     - pip
   run:
-    - python
+    - python =2.7|>3.3
     - docopt >=0.4.0
     - Flask >=0.10.1
     - Markdown >=2.5.1
@@ -40,7 +40,6 @@ about:
   home: https://github.com/joeyespo/grip
   license: MIT
   license_family: MIT
-  # PR to include license_file in the source distribution https://github.com/joeyespo/grip/pull/274
   license_file: LICENSE
   summary: Preview GitHub Markdown files like Readme locally before committing them.
 
