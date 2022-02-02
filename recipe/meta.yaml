@@ -1,5 +1,5 @@
 {% set name = "grip" %}
-{% set version = "4.5.2" %}
+{% set version = "4.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 048b7e5c738ed80bee345bd10840f27eb31687eb67132b40f2473dc1cf67aa0f
+  sha256: 554f9a272b385b886e1b903f0b4323778009c0a681c096950a4bed14e299c79a
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - grip = grip:main
 
 requirements:
   host:
-    - python
+    - python =2.7|>3.3
     - pip
   run:
-    - python
+    - python =2.7|>3.3
     - docopt >=0.4.0
     - Flask >=0.10.1
     - Markdown >=2.5.1
@@ -40,9 +40,8 @@ about:
   home: https://github.com/joeyespo/grip
   license: MIT
   license_family: MIT
-  # PR to include license_file in the source distribution https://github.com/joeyespo/grip/pull/274
   license_file: LICENSE
-  summary: 'Preview GitHub Markdown files like Readme locally before committing them.'
+  summary: Preview GitHub Markdown files like Readme locally before committing them.
 
   description: |
     Grip is a command-line server application written in Python that uses the GitHub markdown API 
