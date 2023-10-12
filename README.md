@@ -1,11 +1,11 @@
-About grip
-==========
+About grip-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/grip-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/joeyespo/grip
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/grip-feedstock/blob/main/LICENSE.txt)
 
 Summary: Preview GitHub Markdown files like Readme locally before committing them.
 
